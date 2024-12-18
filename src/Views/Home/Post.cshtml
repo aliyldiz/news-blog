@@ -1,0 +1,29 @@
+@model NewsBlog.Models.Blog
+
+<header class="masthead" style="background-image: url('@Model.ImagePath')">
+    <div class="overlay"></div>
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1 class="single-line">@Model.Title</h1>
+                    <h2 class="subheading">@Model.Subtitle</h2>
+                    <span class="meta">Posted by
+                        @Model.Author.Name
+                        posted on @Model.CreateTime</span>
+                </div>
+            </div>
+        </div>
+</header>
+
+
+<div class="container">
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    @Html.Raw(Model.Content)
+                </div>
+            </div>
+        </div>
+    </article>
+</div>®
